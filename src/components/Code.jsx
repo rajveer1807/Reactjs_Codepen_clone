@@ -5,7 +5,10 @@ import {DataContext} from '../contexts/DataProvider';
 const Container = styled(Box)`
     display: flex;
     background-color : #060606;
-    height: 50vh;
+    flex-direction: row;
+    @media (max-width: 767px) {
+        flex-direction: column;
+    }  
 `;
 const Code = () => {
     const {html, setHtml, css, setCss, js, setJs}= useContext(DataContext);
